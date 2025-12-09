@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nubank - Controle Financeiro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+
+                <div class="logo">
+                    <h1>Nubank</h1>
+                </div>
+
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+
+    <div class="container">
+        <div id="successAlert" class="alert">Transação adicionada com sucesso!</div>
+        <div id="errorAlert" class="alert">Preencha todos os campos corretamente.</div>
+    </div>
+
+    <section class="container">
+        <h2>Resumo</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Entradas</h3>
+                <p id="totalIncome">R$ 0.00</p>
+            </div>
+
+            <div class="card">
+                <h3>Saídas</h3>
+                <p id="totalExpense">R$ 0.00</p>
+            </div>
+
+            <div class="card">
+                <h3>Saldo</h3>
+                <p id="totalBalance">R$ 0.00</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>Adicionar transação</h2>
+
+        <form id="transactionForm">
+
+            <label for="type">Tipo:</label>
+            <select id="type">
+                <option value="income">Entrada</option>
+                <option value="expense">Saída</option>
+            </select>
+
+            <label for="description">Descrição:</label>
+            <input type="text" id="description" placeholder="Ex: Salário, Mercado, etc">
+
+            <label for="value">Valor:</label>
+            <input type="number" id="value" placeholder="Ex: 1500" step="0.01">
+
+            <button type="submit" class="btn">Adicionar</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
